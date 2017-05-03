@@ -1,0 +1,18 @@
+question-template {
+    .question-template {
+        width: 100%;
+        border: 1px solid grey;
+        text-align: center;
+        border-radius: 10px;
+        padding: 5px;
+        .question {
+            margin: 20px auto;
+        }
+        button {
+            width: 80%;
+            height: 40px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+    }
+}

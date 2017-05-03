@@ -1,0 +1,51 @@
+<!--
+  Generated template for the GameClassic page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>GAME-Classic</ion-title>
+    </ion-navbar>
+    <heartcoin></heartcoin>
+
+    <!-- title -->
+    <div class="title-label">
+        <ion-row>
+            <ion-col col-6>
+                ວິຊາ
+            </ion-col>
+            <ion-col col-3>
+                ຊະນະ
+            </ion-col>
+            <ion-col col-3>
+                ສະເລ່ຍ
+            </ion-col>
+        </ion-row>
+    </div>
+
+</ion-header>
+
+<!-- content -->
+<ion-content>
+
+    <classic-score *ngFor="let classic of classics" [data]="classic" (click)="navtoQuestion()"></classic-score>
+
+</ion-content>
+
+<!-- footer-->
+<ion-footer>
+    <ion-row>
+        <ion-col col-6>
+            ລວມ
+        </ion-col>
+        <ion-col col-3>
+            8/12
+        </ion-col>
+        <ion-col col-3>
+            67%
+        </ion-col>
+    </ion-row>
+</ion-footer>

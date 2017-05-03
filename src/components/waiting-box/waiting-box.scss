@@ -1,0 +1,21 @@
+waiting-box {
+    width: 100%;
+    text-align: center;
+    border-bottom: 5px solid grey;
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+    }
+    .score-board {
+        position: relative;
+        top: -15px;
+    }
+    button {
+        background: wheat;
+        width: 70px;
+        height: 35px;
+        border-radius: 5px;
+        border: 1px solid grey;
+    }
+}

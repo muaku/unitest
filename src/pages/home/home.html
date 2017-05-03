@@ -1,0 +1,54 @@
+<ion-header>
+    <!-- include heartcoin component -->
+    <heartcoin></heartcoin>
+</ion-header>
+
+
+<ion-content padding>
+
+    <div class="ads-card">
+        <ion-card>
+            <img src="../../assets/ads-test.jpg" />
+            <div class="card-content">
+                <ion-row>
+                    <ion-col col-9>
+                        <div class="card-title">São Paulo</div>
+                        <div class="card-subtitle">41 Listings</div>
+                    </ion-col>
+                    <ion-col col-3>
+                        <div class="card-button">
+                            <button>install</button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-card>
+    </div>
+
+    <!-- new game -->
+    <div class="newgame">
+        <button [navPush]="modePage">New Game</button>
+    </div>
+
+    <!-- waiting ... -->
+    <div class="waiting-game">
+        <ion-row>
+            <div class="waiting-label">waiting...</div>
+        </ion-row>
+
+        <!-- use ngFor to loop data(3 items)-->
+        <waiting-box *ngFor="let waiting of waitingProvider.waiting" [data]="waiting"></waiting-box>
+
+
+    </div>
+
+</ion-content>
+
+<!--<ion-footer>
+    <ion-toolbar>
+        <ion-title>Footer</ion-title>
+        Hi lazy loading from HOME
+
+        <button ion-button (click)="logout()">Logout</button>
+    </ion-toolbar>
+</ion-footer>-->

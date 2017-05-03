@@ -1,0 +1,17 @@
+<div *ngIf="data" class="question-template">
+    <div class="question">
+        {{data.question}}
+    </div>
+    <div class="answer1">
+        <button>{{data.answers[0].answer}}</button>
+    </div>
+    <div class="answer2">
+        <button>{{data.answers[1].answer}}</button>
+    </div>
+    <div class="answer3">
+        <button>{{data.answers[2].answer}}</button>
+    </div>
+    <div class="answer4">
+        <button>{{data.answers[3].answer}}</button>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+page-mode {
+    .content {
+        width: 100%;
+        margin-top: 15%;
+        position: relative;
+        text-align: center;
+    }
+    .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px;
+    }
+    .classic-btn {
+        margin: 10px;
+        button {
+            height: 40px;
+            width: 150px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    }
+    .challenge-btn {
+        button {
+            height: 40px;
+            width: 150px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    }
+}

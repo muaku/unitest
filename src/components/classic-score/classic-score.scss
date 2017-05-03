@@ -1,0 +1,17 @@
+classic-score {
+    .classic {
+        width: 100%;
+        border: 1px solid gray;
+        button {
+            height: 40px;
+            width: 100px;
+            border-radius: 5px;
+        }
+        .score {
+            margin-top: 10px;
+        }
+        .percent {
+            margin-top: 10px;
+        }
+    }
+}

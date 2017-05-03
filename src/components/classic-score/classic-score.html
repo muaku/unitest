@@ -1,0 +1,18 @@
+<div *ngIf="data" class="classic">
+    <ion-row>
+        <ion-col col-6>
+            <button>{{data.category}}</button>
+        </ion-col>
+        <ion-col col-3>
+            <div class="score">
+                <span>{{data.score}}</span>/<span>{{data.question_count}}</span>
+            </div>
+        </ion-col>
+        <ion-col col-3>
+            <div class="percent">
+                <span>{{data.percent}}</span>
+            </div>
+
+        </ion-col>
+    </ion-row>
+</div>

@@ -1,0 +1,23 @@
+<!-- Generated template for the WaitingBox component -->
+<div class="waiting-box">
+    <ion-row>
+
+        <ion-col col-9>
+            <ion-col col-3>
+                <img src={{data.playerIdAndScore[0].img}} alt="">
+            </ion-col>
+            <ion-col class="score-board" col-6>
+                {{data.playerIdAndScore[0].score}}
+                <span> _ </span> {{data.playerIdAndScore[1].score}}
+            </ion-col>
+            <ion-col col-3>
+                <img src={{data.playerIdAndScore[1].img}} alt="">
+            </ion-col>
+        </ion-col>
+
+        <ion-col col-3>
+            <button>Play</button>
+        </ion-col>
+
+    </ion-row>
+</div>
