@@ -1,4 +1,10 @@
-<ion-tabs>
-    <ion-tab tabIcon="home" [root]="home"></ion-tab>
-    <ion-tab tabIcon="contact" [root]="profile"></ion-tab>
-</ion-tabs>
+<page-home id="home" class="tab" [style.display]="homeDisplay"></page-home>
+
+
+<page-profile id="profile" class="tab" [style.display]="profileDisplay"></page-profile>
+
+<!---->
+<div class="bar">
+    <button class="bar-item" (click)="openTab('home')">Home</button>
+    <button class="bar-item" (click)="openTab('profile')">Profile</button>
+</div>

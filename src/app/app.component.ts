@@ -18,10 +18,11 @@ export class MyApp {
           console.log("val: ",val)
           this.rootPage = "Tabs"
           splashScreen.hide();
+
           // if Logged in
           // if(val){
           //   if(val.isLoggedIn === true){
-          //     this.rootPage = "Home"
+          //     this.rootPage = "Tabs"
           //     splashScreen.hide();
           //   }
           // }

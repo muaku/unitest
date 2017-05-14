@@ -1,31 +1,39 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-// import { Home } from '../home/home'
-// import { Profile } from '../profile/profile'
 
-/**
- * Generated class for the Tabs page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @IonicPage()
 @Component({
   selector: 'page-tabs',
   templateUrl: 'tabs.html',
 })
 export class Tabs {
-  home;
-  profile;
+  
+  homeDisplay;
+  profileDisplay:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.home = "Home";
-    this.profile = "Profile";
+    this.profileDisplay = "none"
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Tabs');
+  }
+
+  openTab(tabName){
+    switch(tabName){
+      case "home":
+        this.homeDisplay = ""
+        this.profileDisplay = "none"
+        break
+      case "profile":
+        this.homeDisplay = "none"
+        this.profileDisplay = ""
+        break
+      default:
+        console.log("DO nothing")
+    }
+      
+    
   }
 
 }

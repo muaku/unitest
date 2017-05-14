@@ -1,0 +1,61 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>game-challenge</ion-title>
+    </ion-navbar>
+
+    <heartcoin></heartcoin>
+
+</ion-header>
+
+
+<ion-content>
+
+    <div class="category-label">
+        <ion-row>
+            <div class="title">
+                ເລືອກໝວດ
+            </div>
+        </ion-row>
+        <ion-row>
+            <ion-col col-4>
+                <button [navPush]="choosefriends">ພາສາລາວ - ວັນນະຄະດີ</button>
+            </ion-col>
+            <ion-col col-4>
+                <button>ພາສາລາວ - ວັນນະຄະດີ</button>
+            </ion-col>
+            <ion-col col-4>
+                <button>ພາສາລາວ - ວັນນະຄະດີ</button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-4>
+                <button>ພາສາລາວ - ວັນນະຄະດີ</button>
+            </ion-col>
+            <ion-col col-4>
+                <button>ພາສາລາວ - ວັນນະຄະດີ</button>
+            </ion-col>
+            <ion-col col-4>
+                <button>ພາສາລາວ - ວັນນະຄະດີ</button>
+            </ion-col>
+
+        </ion-row>
+    </div>
+
+    <!-- waiting ... -->
+    <div *ngIf="waitingDatas" class="waiting-game">
+        <ion-row>
+            <div class="waiting-label">waiting...</div>
+        </ion-row>
+
+        <!-- use ngFor to loop data(3 items)-->
+        <div class="waiting-score">
+            <waiting-box *ngFor="let waiting of waitingDatas" [data]="waiting"></waiting-box>
+        </div>
+
+
+
+    </div>
+
+
+</ion-content>

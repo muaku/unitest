@@ -1,0 +1,21 @@
+classic-end-popup {
+    .clssend-popup {
+        color: white;
+        h1 {
+            font-size: 40px;
+        }
+        span {
+            font-size: 26px;
+            font-weight: bold;
+            color: white;
+        }
+        button {
+            height: 40px;
+            width: 100px;
+            border-radius: 5px;
+        }
+        .btngroup {
+            margin: 20px auto;
+        }
+    }
+}

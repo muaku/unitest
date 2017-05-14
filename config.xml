@@ -89,4 +89,5 @@
     <variable name="APP_NAME" value="unitest"/>
   </plugin>
   <plugin name="cordova-sqlite-storage" spec="~2.0.3"/>
+  <plugin name="cordova-plugin-admobpro" spec="~2.28.3"/>
 </widget>

@@ -12,7 +12,6 @@ import 'rxjs/add/operator/map';
 export class Classic {
 
   constructor(public http: Http) {
-    console.log('Hello Classic Provider');
   }
 
   load() {
@@ -21,7 +20,27 @@ export class Classic {
 
   // get question
   getQuestion() {
-    return this.http.get("../assets/data/question-data.json").map(res => res.json())
+    return this.http.get("../assets/data/question-data.json").map(res => {
+      var resInJson = res.json()
+      for(var i=0; i<resInJson.data.length; i++){
+         var originalAnswerOrder = resInJson.data[i].answers
+         resInJson.data[i].answers = this.randomizeAnswer(originalAnswerOrder)
+      }
+     
+      console.log("originalData: ", resInJson)
+      return resInJson
+    })
+  }
+
+   // random Answer
+  private randomizeAnswer(answers: any[]): any[] {
+    for(var i=0; i<answers.length; i++) {
+      let j = Math.floor(Math.random() * (i+1))
+      let temp = answers[i]
+      answers[i] = answers[j]
+      answers[j] = temp
+    }
+    return answers;
   }
 
 }

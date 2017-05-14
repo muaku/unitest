@@ -6,10 +6,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { Facebook } from '@ionic-native/facebook';
 import { IonicStorageModule } from '@ionic/storage';
 import { HttpModule } from '@angular/http';
+import { AdMob } from '@ionic-native/admob';
 
 import { MyApp } from './app.component';
 import { WaitingMatches } from '../providers/waiting-matches'
 import { Classic } from '../providers/classic'
+import { Advert } from '../providers/advert'
 
 @NgModule({
   declarations: [
@@ -33,8 +35,10 @@ import { Classic } from '../providers/classic'
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Facebook,
+    AdMob,
     WaitingMatches,
-    Classic
+    Classic,
+    Advert
   ]
 })
 export class AppModule {}

@@ -1,12 +1,6 @@
-<!--
-  Generated template for the Question page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-    <ion-navbar>
+    <ion-navbar [hideBackButton]="true">
         <ion-title>Classic</ion-title>
     </ion-navbar>
 
@@ -17,6 +11,60 @@
 
 <ion-content padding>
 
-    <question-template [data]="datas"></question-template>
+    <!-- time counter -->
+    <div class="timer">
+        00:{{showTimeLeft}}
+    </div>
+
+    <!-- begin slides -->
+    <ion-slides [spaceBetween]="spaceBetween">
+        <ion-slide *ngFor="let data of datas ">
+            <!-- question -->
+            <question-template [data]="data"></question-template>
+
+            <!-- answers -->
+            <div *ngIf="data" class="answer">
+                <button id="0" (click)="selectAnswer(data.answers[0])">{{data.answers[0].answer}}</button>
+                <button id="1" (click)="selectAnswer(data.answers[1])">{{data.answers[1].answer}}</button>
+                <button id="2" (click)="selectAnswer(data.answers[2])">{{data.answers[2].answer}}</button>
+                <button id="3" (click)="selectAnswer(data.answers[3])">{{data.answers[3].answer}}</button>
+                <!--<button *ngFor="let answer of data.answers" (click)="selectAnswer(answer)">{{answer.answer}}</button>-->
+            </div>
+
+        </ion-slide>
+    </ion-slides>
+
+    <!-- Show score -->
+    <div class="score">
+        <span>score: {{score}}/{{numOfQuestion}}</span>
+    </div>
+
+
+    <!-- Option -->
+    <div class="option">
+        <div class="option-title">
+            ຕົວຊ່ວຍ
+        </div>
+        <button (click)="cutChoice()">
+        ຕັດ1ຂໍ້
+      </button>
+        <button (click)="answer2Time()" [disabled]="outOfChance">
+        ຕອບ2ເທື່ອ
+      </button>
+    </div>
+
+    <!-- quit -->
+    <div class="quit">
+        <button>
+        Quit
+      </button>
+    </div>
 
 </ion-content>
+
+<!-- POPUP -->
+<answer-popup *ngIf="hasAnswered" [showText]="showText"></answer-popup>
+
+<classic-end-popup *ngIf="gameFinished" [score]="score"></classic-end-popup>
+
+<tryagain-popup *ngIf="showTryAgain"></tryagain-popup>

@@ -1,24 +1,19 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { Tabs } from './tabs';
+import { GameChallenge } from './game-challenge';
 
 import { SharedModule } from '../../components/shared/shared.module'
-import { Home } from '../home/home'
-import { Profile } from '../profile/profile'
 
 @NgModule({
   declarations: [
-    Tabs,
-    Home,
-    Profile
-   
+    GameChallenge,
   ],
   imports: [
-    IonicPageModule.forChild(Tabs),
+    IonicPageModule.forChild(GameChallenge),
     SharedModule
   ],
   exports: [
-    Tabs
+    GameChallenge
   ]
 })
-export class TabsModule {}
+export class GameChallengeModule {}

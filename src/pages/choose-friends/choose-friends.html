@@ -1,0 +1,36 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Choose Friends</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <div class="content">
+        <!-- search bar -->
+        <div class="search-bar">
+            <ion-row>
+                <ion-col col-9>
+                    <input type="text" placeholder="Search">
+                </ion-col>
+                <ion-col col-3>
+                    <button>Find</button>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <!-- search result -->
+        <div *ngIf="friends" class="search-result">
+            <!-- friends template goes here -->
+            <friend-template *ngFor="let friend of friends" [data]="friend"></friend-template>
+        </div>
+    </div>
+    <!-- lets play -->
+    <div class="letsplay">
+        <button>Let's Play</button>
+    </div>
+
+
+
+</ion-content>

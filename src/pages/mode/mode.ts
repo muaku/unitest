@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Navbar } from 'ionic-angular';
 
 /**
  * Generated class for the Mode page.
@@ -13,14 +13,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'mode.html',
 })
 export class Mode {
+
   gameclassic:any;
+  gamechallenge:any;
+  @ViewChild(Navbar) navBar: Navbar;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.gameclassic = "GameClassic"
+    this.gamechallenge = "GameChallenge"
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Mode');
+    this.navBar.backButtonClick = () => {
+      this.navCtrl.push("Tabs")
+    }
+
   }
+
+  
+
+ 
 
 }

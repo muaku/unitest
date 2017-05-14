@@ -1,0 +1,21 @@
+{
+    "waiting": [{
+            "playerIdAndScore": [
+                { "img": "https://graph.facebook.com/1274880022561831/picture?type=small", "score": 8 },
+                { "img": "https://graph.facebook.com/1274880022561831/picture?type=small", "score": 3 }
+            ]
+        },
+        {
+            "playerIdAndScore": [
+                { "img": "https://graph.facebook.com/1274880022561831/picture?type=small", "score": 8 },
+                { "img": "https://graph.facebook.com/1274880022561831/picture?type=small", "score": 3 }
+            ]
+        },
+        {
+            "playerIdAndScore": [
+                { "img": "https://graph.facebook.com/1274880022561831/picture?type=small", "score": 8 },
+                { "img": "https://graph.facebook.com/1274880022561831/picture?type=small", "score": 3 }
+            ]
+        }
+    ]
+}

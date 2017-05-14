@@ -1,21 +1,27 @@
 waiting-box {
-    width: 100%;
-    text-align: center;
-    border-bottom: 5px solid grey;
-    img {
-        width: 40px;
-        height: 40px;
-        border-radius: 20px;
-    }
-    .score-board {
-        position: relative;
-        top: -15px;
-    }
-    button {
-        background: wheat;
-        width: 70px;
-        height: 35px;
-        border-radius: 5px;
+    .waiting-content {
+        width: 100%;
+        text-align: center;
         border: 1px solid grey;
+        margin: 2px;
+        border-radius: 5px;
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+        }
+        .score-board {
+            position: relative;
+            top: -15px;
+        }
+        button {
+            position: relative;
+            top: 5px;
+            background: wheat;
+            width: 90%;
+            height: 35px;
+            border-radius: 5px;
+            border: 1px solid grey;
+        }
     }
 }

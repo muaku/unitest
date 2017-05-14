@@ -1,10 +1,11 @@
 <ion-header>
+    <div class="adsArea"></div>
     <!-- include heartcoin component -->
     <heartcoin></heartcoin>
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
     <div class="ads-card">
         <ion-card>
@@ -27,28 +28,21 @@
 
     <!-- new game -->
     <div class="newgame">
-        <button [navPush]="modePage">New Game</button>
+        <button (click)="newGame()">New Game</button>
     </div>
 
     <!-- waiting ... -->
-    <div class="waiting-game">
+    <div *ngIf="waitingDatas" class="waiting-game">
         <ion-row>
             <div class="waiting-label">waiting...</div>
         </ion-row>
 
         <!-- use ngFor to loop data(3 items)-->
-        <waiting-box *ngFor="let waiting of waitingProvider.waiting" [data]="waiting"></waiting-box>
+        <div class="waiting">
+            <waiting-box *ngFor="let waiting of waitingDatas" [data]="waiting"></waiting-box>
+        </div>
 
 
     </div>
 
 </ion-content>
-
-<!--<ion-footer>
-    <ion-toolbar>
-        <ion-title>Footer</ion-title>
-        Hi lazy loading from HOME
-
-        <button ion-button (click)="logout()">Logout</button>
-    </ion-toolbar>
-</ion-footer>-->

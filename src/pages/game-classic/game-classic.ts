@@ -4,12 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 // Classic service
 import { Classic } from "../../providers/classic"
 
-/**
- * Generated class for the GameClassic page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 @IonicPage()
 @Component({
   selector: 'page-game-classic',
@@ -18,7 +13,7 @@ import { Classic } from "../../providers/classic"
 export class GameClassic {
 
   classics: any;
-  
+
   constructor(public navCtrl: NavController, public navParams: NavParams,public _classicProvider: Classic) {
     this.load()
   }
@@ -26,6 +21,7 @@ export class GameClassic {
   ionViewDidLoad() {
     console.log('ionViewDidLoad GameClassic');
   }
+  
 
   load(){
     this._classicProvider.load().subscribe(data => {

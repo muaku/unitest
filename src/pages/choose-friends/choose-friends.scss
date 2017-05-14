@@ -1,0 +1,30 @@
+page-choose-friends {
+    .content {
+        width: 100%;
+        border: 1px solid grey;
+        padding: 10px;
+        border-radius: 3px;
+    }
+    .search-bar {
+        width: 100%;
+        input {
+            width: 100%;
+            height: 30px;
+            border-radius: 3px;
+        }
+        button {
+            width: 100%;
+            height: 30px;
+            border-radius: 3px;
+        }
+    }
+    .letsplay {
+        text-align: center;
+        margin: 10px auto;
+        button {
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+        }
+    }
+}

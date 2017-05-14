@@ -1,0 +1,32 @@
+page-game-challenge {
+    .category-label {
+        text-align: center;
+        padding: 10px;
+        .title {
+            font-size: 20px;
+            width: 100%;
+            text-align: center;
+            margin: 20px auto;
+        }
+        button {
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid grey;
+        }
+    }
+    // waiting
+    .waiting-game {
+        width: 100%;
+        .waiting-label {
+            margin-top: 20px;
+            width: 100%;
+            background: gray;
+            text-align: center;
+        }
+        //
+        .waiting-score {
+            padding: 15px;
+        }
+    }
+}
