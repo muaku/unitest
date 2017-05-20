@@ -4,7 +4,17 @@
 <page-profile id="profile" class="tab" [style.display]="profileDisplay"></page-profile>
 
 <!---->
-<div class="bar">
-    <button class="bar-item" (click)="openTab('home')">Home</button>
-    <button class="bar-item" (click)="openTab('profile')">Profile</button>
-</div>
+<ion-footer>
+    <div class="bar">
+        <ion-row>
+            <ion-col col-6 no-padding>
+                <button class="bar-item" (click)="openTab('home')">Home</button>
+            </ion-col>
+            <ion-col col-6 no-padding>
+                <button class="bar-item" (click)="openTab('profile')">Profile</button>
+            </ion-col>
+        </ion-row>
+
+
+    </div>
+</ion-footer>

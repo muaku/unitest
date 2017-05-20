@@ -3,6 +3,7 @@ import { IonicPageModule } from 'ionic-angular';
 
 import { GameClassic } from './game-classic';
 import { SharedModule } from '../../components/shared/shared.module'
+import { ClassicScoreModule } from '../../components/classic-score/classic-score.module'
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { SharedModule } from '../../components/shared/shared.module'
   ],
   imports: [
     IonicPageModule.forChild(GameClassic),
-    SharedModule
+    SharedModule,
+    ClassicScoreModule
   ],
   exports: [
     GameClassic

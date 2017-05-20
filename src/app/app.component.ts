@@ -4,6 +4,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Storage } from '@ionic/storage';
 
+declare var FCMPlugin;
+declare var FirebasePlugin;
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -30,6 +33,29 @@ export class MyApp {
           //   this.rootPage = "Login"
           //   splashScreen.hide();
           // }
+
+          // grant permission (ios only)
+          if(platform.is("ios")){
+            FirebasePlugin.grantPermission();
+          }
+         FirebasePlugin.hasPermission(function(data){
+              console.log(data.isEnabled);
+          });
+
+          // firebase notification
+          FirebasePlugin.getToken(function(token) {
+              // save this server-side and use it to push notifications to this device
+              console.log(token);
+          }, function(error) {
+              console.error(error);
+          });
+
+          // trigger when user click on notification or just log when app in foreground
+          FirebasePlugin.onNotificationOpen(function(notification) {
+              console.log("notification", notification);
+          }, function(error) {
+              console.error(error);
+          });
 
         })
      })

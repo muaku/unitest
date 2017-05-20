@@ -15,8 +15,6 @@ export class QuestionTemplate {
   @Input() data;
 
   constructor() {
-    console.log('Hello QuestionTemplate Component');
-    console.log("data on question-template: ", this.data)
   }
 
 }

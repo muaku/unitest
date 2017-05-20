@@ -6,9 +6,9 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { AdMob,AdMobOptions } from '@ionic-native/admob';
 
 import { WaitingMatches } from '../../providers/waiting-matches'
-import { Advert } from '../../providers/advert'
+// import { Advert } from '../../providers/advert'
 
-declare var FacebookAds: any;
+//declare var FacebookAds: any;
 
 @IonicPage()
 @Component({
@@ -22,13 +22,12 @@ export class Home {
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public storage: Storage, public fb: Facebook,
               public waitingProvider: WaitingMatches, platform: Platform,
-              public advert: Advert, public admob: AdMob) {
+              public admob: AdMob) {
 
     platform.ready().then(() => {
       // load waiting data
       this.loadWaiting()
-      //
-      this.fbNativeAds()
+      
     
       
     })
@@ -36,18 +35,21 @@ export class Home {
   }
 
   ionViewDidLoad() {
+    console.log("HOME Didload")
     // Register ads events
      this.registerAdsEvents() 
   }
 
-  // Show banner Ads, show tabbar
-  ionViewWillEnter(){
-    this.advert.showBanner()
-  }
-  // Hide banner Ads, hide tabbar
-  ionViewWillLeave(){
-    this.advert.hideBanner()
-  }
+  // // Show banner Ads, show tabbar
+  // ionViewWillEnter(){
+  //   console.log("HOME WILL ENTER")
+  //   this.advert.showBanner()
+  // }
+  // // Hide banner Ads, hide tabbar
+  // ionViewWillLeave(){
+  //   console.log("HOME WILL LEAVE")
+  //   this.advert.hideBanner()
+  // }
 
   // loading waiting data
   loadWaiting (){
@@ -84,29 +86,29 @@ export class Home {
 
   }
 
-  // facebook native ads
-  fbNativeAds(){
+  // // facebook native ads
+  // fbNativeAds(){
 
-    if(FacebookAds) {
-      console.log("FacebookAds is there .... ")
-       FacebookAds.setOptions({
-          isTesting: true,
-          deviceHash: 'LQjjK9NF0P9MXHGamZr4CaZsDgQ='
-        });
-      FacebookAds.createNativeAd("1487848894642151_1500835616676812",function(data){
-        console.log("Success: ... ",data)
-      })
-    }
-    //
-    document.addEventListener("onAdLoaded", function(data){
-      let temp: any = data;
-      console.log("fbNativeAds: ",data)
-      if(temp.adType === "native"){
+  //   if(FacebookAds) {
+  //     console.log("FacebookAds is there .... ")
+  //     //  FacebookAds.setOptions({
+  //     //     isTesting: true,
+  //     //     deviceHash: 'LQjjK9NF0P9MXHGamZr4CaZsDgQ='
+  //     //   });
+  //     FacebookAds.createNativeAd("1487848894642151_1500835616676812",function(data){
+  //       console.log("Success: ... ",data)
+  //     })
+  //   }
+  //   //
+  //   document.addEventListener("onAdLoaded", function(data){
+  //     let temp: any = data;
+  //     console.log("fbNativeAds: ",data)
+  //     if(temp.adType === "native"){
         
-      }
-    })
+  //     }
+  //   })
 
-  }
+  // }
 
  
 

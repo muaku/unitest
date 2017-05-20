@@ -1,17 +1,24 @@
 classic-score {
     .classic {
         width: 100%;
-        border: 1px solid gray;
+        background: white;
+        border-bottom: 1px solid grey;
         button {
-            height: 40px;
-            width: 100px;
+            height: 65px;
+            width: 130px;
+            border: 1px solid #16A07E;
             border-radius: 5px;
+            font-size: 20px;
         }
         .score {
-            margin-top: 10px;
+            text-align: center;
+            padding-top: 25px;
+            font-size: 20px;
         }
         .percent {
-            margin-top: 10px;
+            text-align: center;
+            padding-top: 25px;
+            font-size: 20px;
         }
     }
 }

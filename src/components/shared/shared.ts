@@ -7,11 +7,8 @@ import { Component } from '@angular/core';
 })
 export class Shared {
 
-  text: string;
 
   constructor() {
-    console.log('Hello Shared Component');
-    this.text = 'Hello World';
   }
 
 }

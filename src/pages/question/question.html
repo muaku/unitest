@@ -1,6 +1,6 @@
 <ion-header>
 
-    <ion-navbar [hideBackButton]="true">
+    <ion-navbar [hideBackButton]="true" color="navColor">
         <ion-title>Classic</ion-title>
     </ion-navbar>
 
@@ -39,28 +39,32 @@
         <span>score: {{score}}/{{numOfQuestion}}</span>
     </div>
 
+</ion-content>
 
-    <!-- Option -->
-    <div class="option">
-        <div class="option-title">
-            ຕົວຊ່ວຍ
-        </div>
-        <button (click)="cutChoice()">
-        ຕັດ1ຂໍ້
-      </button>
-        <button (click)="answer2Time()" [disabled]="outOfChance">
-        ຕອບ2ເທື່ອ
-      </button>
-    </div>
-
-    <!-- quit -->
-    <div class="quit">
-        <button>
+<ion-footer>
+    <ion-toolbar>
+        <ion-row>
+            <ion-col col-3>
+                <button id="quit-btn">
         Quit
       </button>
-    </div>
+            </ion-col>
+            <ion-col offset-3 col-3>
+                <button (click)="cutChoice()">
+        ຕັດ1ຂໍ້
+      </button>
+            </ion-col>
+            <ion-col col-3>
+                <button (click)="answer2Time()" [disabled]="outOfChance">
+        ຕອບ2ເທື່ອ
+      </button>
+            </ion-col>
+        </ion-row>
 
-</ion-content>
+
+
+    </ion-toolbar>
+</ion-footer>
 
 <!-- POPUP -->
 <answer-popup *ngIf="hasAnswered" [showText]="showText"></answer-popup>

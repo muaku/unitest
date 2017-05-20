@@ -3,19 +3,19 @@ import { IonicPageModule } from 'ionic-angular';
 import { Tabs } from './tabs';
 
 import { SharedModule } from '../../components/shared/shared.module'
-import { Home } from '../home/home'
-import { Profile } from '../profile/profile'
+import { HomeModule } from '../home/home.module'
+import { ProfileModule } from '../profile/profile.module'
 
 @NgModule({
   declarations: [
-    Tabs,
-    Home,
-    Profile
+    Tabs
    
   ],
   imports: [
     IonicPageModule.forChild(Tabs),
-    SharedModule
+    SharedModule,
+    HomeModule,
+    ProfileModule
   ],
   exports: [
     Tabs
