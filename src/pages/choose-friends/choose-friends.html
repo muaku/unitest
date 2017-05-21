@@ -26,6 +26,11 @@
             <friend-template *ngFor="let friend of friends" [data]="friend"></friend-template>
         </div>
     </div>
+
+    <!-- Invite friends -->
+    <div class="invite">
+        <p>Or invite friends: </p><button (click)="fbInvite()">Invite</button>
+    </div>
     <!-- lets play -->
     <div class="letsplay">
         <button>Let's Play</button>

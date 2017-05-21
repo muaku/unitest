@@ -12,11 +12,8 @@ import { Component } from '@angular/core';
 })
 export class Heartcoin {
 
-  text: string;
 
   constructor() {
-    console.log('Hello Heartcoin Component');
-    this.text = 'Hello World';
   }
 
 }
