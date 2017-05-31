@@ -16,10 +16,10 @@
             MODE
         </div>
         <div class="classic-btn">
-            <button [navPush]="gameclassic">Classic</button>
+            <button #classicBtn (click)="classicFunc()">Classic</button>
         </div>
         <div class="challenge-btn">
-            <button [navPush]="gamechallenge">Challenge</button>
+            <button #challengeBtn (click)="challengeFunc()">Challenge</button>
         </div>
     </div>
 

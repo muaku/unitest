@@ -57,6 +57,8 @@ page-home {
         text-align: center;
         margin-bottom: 20px;
         button {
+            position: relative;
+            top: 0px;
             background-color: #EF2874;
             font-size: 20px;
             color: white;
@@ -64,9 +66,10 @@ page-home {
             width: 180px;
             border-radius: 5px;
             border: #C7C7C7;
-            -webkit-box-shadow: 0px 1px 3px 1px rgba(16, 98, 112, 1);
-            -moz-box-shadow: 0px 1px 3px 1px rgba(16, 98, 112, 1);
-            box-shadow: 0px 1px 3px 1px rgba(16, 98, 112, 1);
+            //transition: 1s linear !important;
+            -webkit-box-shadow: 0px 5px 3px 1px rgba(16, 98, 112, 1);
+            -moz-box-shadow: 0px 5px 3px 1px rgba(16, 98, 112, 1);
+            box-shadow: 0px 5px 3px 1px rgba(16, 98, 112, 1);
         }
     }
     // waiting
@@ -78,7 +81,8 @@ page-home {
             height: 22px;
             padding: 3px;
             background: #8664D3;
-            border-radius: 0px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
             text-align: center;
             color: white;
         }

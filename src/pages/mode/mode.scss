@@ -17,26 +17,30 @@ page-mode {
         margin-top: 50px;
         margin-bottom: 20px;
         button {
+            position: relative;
+            top: 0px;
             height: 60px;
             width: 200px;
             border-radius: 5px;
             font-size: 14px;
             background: #2F9DFC;
-            -webkit-box-shadow: 0px 1px 3px 1px rgba(16, 98, 112, 1);
-            -moz-box-shadow: 0px 1px 3px 1px rgba(16, 98, 112, 1);
-            box-shadow: 0px 1px 3px 1px rgba(16, 98, 112, 1);
+            -webkit-box-shadow: 0px 5px 3px 1px rgba(16, 98, 112, 1);
+            -moz-box-shadow: 0px 5px 3px 1px rgba(16, 98, 112, 1);
+            box-shadow: 0px 5px 3px 1px rgba(16, 98, 112, 1);
         }
     }
     .challenge-btn {
         button {
+            position: relative;
+            top: 0px;
             height: 60px;
             width: 200px;
             border-radius: 5px;
             font-size: 14px;
             background: #EF2874;
-            -webkit-box-shadow: 0px 1px 3px 1px rgba(16, 98, 112, 1);
-            -moz-box-shadow: 0px 1px 3px 1px rgba(16, 98, 112, 1);
-            box-shadow: 0px 1px 3px 1px rgba(16, 98, 112, 1);
+            -webkit-box-shadow: 0px 5px 3px 1px rgba(16, 98, 112, 1);
+            -moz-box-shadow: 0px 5px 3px 1px rgba(16, 98, 112, 1);
+            box-shadow: 0px 5px 3px 1px rgba(16, 98, 112, 1);
         }
     }
 }

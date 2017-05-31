@@ -7,11 +7,14 @@ import { Facebook } from '@ionic-native/facebook';
 import { IonicStorageModule } from '@ionic/storage';
 import { HttpModule } from '@angular/http';
 import { AdMob } from '@ionic-native/admob';
+import { SocialSharing } from '@ionic-native/social-sharing';
+import { Screenshot } from '@ionic-native/screenshot';
 
 import { MyApp } from './app.component';
 import { WaitingMatches } from '../providers/waiting-matches'
 import { Classic } from '../providers/classic'
 import { Advert } from '../providers/advert'
+import { CounterProvider } from '../providers/counter';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { Advert } from '../providers/advert'
     AdMob,
     WaitingMatches,
     Classic,
-    Advert
+    Advert,
+    SocialSharing,
+    Screenshot,
+    CounterProvider
   ]
 })
 export class AppModule {}

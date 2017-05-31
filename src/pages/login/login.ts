@@ -53,7 +53,7 @@ export class Login {
 
           // store user data in storage
           this.storage.set("user", object).then(() => {
-            this.navCtrl.push("Home")
+            this.navCtrl.push("Tabs")
           }), function(err){
             console.log(err)
           }

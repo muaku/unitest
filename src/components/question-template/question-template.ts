@@ -14,7 +14,10 @@ export class QuestionTemplate {
 
   @Input() data;
 
+
   constructor() {
   }
+
+  
 
 }

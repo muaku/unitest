@@ -13,29 +13,33 @@ declare var FirebasePlugin;
 export class MyApp {
   rootPage:any;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public storage: Storage) {
-    platform.ready().then(() => {
 
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, 
+              public storage: Storage) {
+    platform.ready().then(() => {
+        
+
+      // work with storage
       this.storage.ready().then(() => {
         this.storage.get('user').then((val) => {
           console.log("val: ",val)
-          this.rootPage = "Tabs"
-          splashScreen.hide();
+          // this.rootPage = "Tabs"
+          // splashScreen.hide();
 
           // if Logged in
-          // if(val){
-          //   if(val.isLoggedIn === true){
-          //     this.rootPage = "Tabs"
-          //     splashScreen.hide();
-          //   }
-          // }
-          // else{
-          //   this.rootPage = "Login"
-          //   splashScreen.hide();
-          // }
+          if(val){
+            if(val.isLoggedIn === true){
+              this.rootPage = "Tabs"
+              splashScreen.hide();
+            }
+          }
+          else{
+            this.rootPage = "Login"
+            splashScreen.hide();
+          }
 
           // grant permission (ios only)
-          if(platform.is("ios")){
+         if(platform.is("ios")){
             FirebasePlugin.grantPermission();
           }
          FirebasePlugin.hasPermission(function(data){

@@ -17,5 +17,12 @@ classic-end-popup {
         .btngroup {
             margin: 20px auto;
         }
+        .sharegroup {
+            button {
+                height: 50px;
+                width: 140px;
+                border-radius: 5px;
+            }
+        }
     }
 }

@@ -1,8 +1,12 @@
 <div class="template">
     <ion-row>
-        <img src={{data.img}} alt="img">
-        <div class="name">
-            {{data.name}}
-        </div>
+        <ion-col col-2 class="imgname">
+            <img src={{data.img}} alt="img">
+        </ion-col>
+        <ion-col col-10>
+            <div class="name">
+                {{data.name}}
+            </div>
+        </ion-col>
     </ion-row>
 </div>

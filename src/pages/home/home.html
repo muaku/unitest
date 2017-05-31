@@ -34,7 +34,7 @@
 
     <!-- new game -->
     <div class="newgame">
-        <button (click)="newGame()">New Game</button>
+        <button #newgameBtn (click)="newGame()">New Game</button>
     </div>
 
     <!-- waiting ... -->
@@ -50,5 +50,7 @@
 
 
     </div>
+
+    <div id="timecounter"></div>
 
 </ion-content>
