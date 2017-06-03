@@ -14,22 +14,23 @@ export class MyApp {
   rootPage:any;
 
 
+
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, 
               public storage: Storage) {
     platform.ready().then(() => {
-        
 
+      // test timer
+      //this.countdownTimer(1, 0, 5)
+        
       // work with storage
       this.storage.ready().then(() => {
         this.storage.get('user').then((val) => {
           console.log("val: ",val)
-          // this.rootPage = "Tabs"
-          // splashScreen.hide();
 
           // if Logged in
           if(val){
             if(val.isLoggedIn === true){
-              this.rootPage = "Tabs"
+              this.rootPage = "Home"
               splashScreen.hide();
             }
           }
@@ -70,5 +71,26 @@ export class MyApp {
       
     });
   }
+
+  // updateTimer(){
+
+  //   this.msLeft = this.endTime - (+new Date)  //Date in millisec
+  //   if(this.msLeft < 1000){
+  //     // do something
+  //   }else {
+  //     this.time = new Date(this.msLeft) // convert millisec to Date type
+  //     this.hours = this.time.getUTCHours()
+  //     this.mins = this.time.getUTCMinutes()
+  //     this.seconds = this.time.getUTCSeconds()
+  //     console.log(this.hours +":"+this.mins +":"+ this.seconds)
+  //     setTimeout(this.updateTimer,500)
+  //   }
+
+  // }
+
+ 
+
+   
+
 }
 

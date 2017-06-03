@@ -38,4 +38,13 @@ export class Profile {
     })
   }
 
+  //gotoProfile
+  gotoProfile(){
+    console.log("Do nothing")
+  }
+  // gotoHome
+  gotoHome(){
+    this.navCtrl.push("Home")
+  }
+
 }

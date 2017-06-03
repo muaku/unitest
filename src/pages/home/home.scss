@@ -1,8 +1,7 @@
 page-home {
-    .header {}
-    ion-content {
-        background-color: #F7F2F2 !important;
-    }
+    // ion-content {
+    //     background-color: #F7F2F2 !important;
+    // }
     .adsArea {
         width: 100%;
         height: 50px;
@@ -93,6 +92,20 @@ page-home {
             border: 1px solid grey;
             padding: 0 15px;
             background: white;
+        }
+    }
+    // buttom bar
+    .bar {
+        position: absolute;
+        width: 100%;
+        height: 55px;
+        left: 0;
+        bottom: 0px;
+        z-index: 2;
+        button {
+            width: 100%;
+            height: 55px;
+            background-color: #16A07E;
         }
     }
 }

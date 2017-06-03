@@ -15,6 +15,7 @@ import { WaitingMatches } from '../providers/waiting-matches'
 import { Classic } from '../providers/classic'
 import { Advert } from '../providers/advert'
 import { CounterProvider } from '../providers/counter';
+import { HeartTimer } from '../providers/heartTimer';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { CounterProvider } from '../providers/counter';
     Advert,
     SocialSharing,
     Screenshot,
-    CounterProvider
+    CounterProvider,
+    HeartTimer,
   ]
 })
 export class AppModule {}

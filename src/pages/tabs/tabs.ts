@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Platform } from 'ionic-angular';
 
 import { Advert } from '../../providers/advert'
 import { AdMob } from '@ionic-native/admob';
+import { Heartcoin } from '../../components/heartcoin/heartcoin'
+import { HeartTimer } from "../../providers/heartTimer"
 
 declare var FacebookAds: any;
 
@@ -12,14 +14,19 @@ declare var FacebookAds: any;
   selector: 'page-tabs',
   templateUrl: 'tabs.html',
 })
-export class Tabs {
+export class Tabs implements OnInit {
   
   homeDisplay;
   profileDisplay:any;
   unregisterBackButtonAction: any
+  heartTimerDisplay
+  coins = 20
+  hearts = 0
+
+
 
   constructor(public platform: Platform,public navCtrl: NavController, public navParams: NavParams,
-              public advert: Advert, public admob: AdMob) {
+              public advert: Advert, public admob: AdMob, public heartTimerService: HeartTimer) {
     this.platform.ready().then(() => {
       console.log("Platform ready in tabs")
       this.registerAdsEvents()
@@ -27,8 +34,10 @@ export class Tabs {
     })
     this.profileDisplay = "none"
 
-    
+  }
 
+  ngOnInit(){
+    this.heartTimerService.countdownTime.subscribe(res => this.heartTimerDisplay = res)
   }
 
   ionViewDidLoad() {
@@ -42,6 +51,8 @@ export class Tabs {
     this.inittializeBackBtn()
     // show banner ads
     this.advert.showBanner()
+    //
+    
   }
   // Hide banner Ads, hide tabbar
   ionViewWillLeave(){
@@ -71,10 +82,12 @@ export class Tabs {
       case "home":
         this.homeDisplay = ""
         this.profileDisplay = "none"
+        this.advert.showBanner()  // show ads
         break
       case "profile":
         this.homeDisplay = "none"
         this.profileDisplay = ""
+        this.advert.hideBanner()  // hide ads
         break
       default:
         console.log("DO nothing")
@@ -124,5 +137,17 @@ export class Tabs {
     })
 
   }
+
+  
+  countBtn() {
+    this.heartCountdownTimer(1)
+  }
+
+  // countdown heartTimer
+  heartCountdownTimer(hearts){
+    this.heartTimerService.startHeartTimer(hearts)
+  }
+
+ 
 
 }

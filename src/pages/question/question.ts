@@ -73,7 +73,7 @@ export class Question {
          this.confirmAlertHandler()
     } else {
       // if game is finished, then navigate to Home
-      this.navCtrl.push("Tabs")
+      this.navCtrl.push("Home")
     }
  
   }
@@ -97,7 +97,7 @@ export class Question {
             console.log("Back to Home")
             // clear timer (counter) &&  Navagate back to Home
             if(this.setTimer) clearInterval(this.setTimer)
-            this.navCtrl.push("Tabs")
+            this.navCtrl.push("Home")
           }
         }
       ]

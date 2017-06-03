@@ -1,56 +1,74 @@
 <div class="header">
     <div class="adsArea">
     </div>
-    <!-- include heartcoin component -->
-    <heartcoin></heartcoin>
-</div>
-
-<ion-content>
-
-    <ion-row>
-        <ion-col col-10 offset-1>
-            <div class="ads-card">
-                <ion-card>
-                    <img src="../../assets/ads-test.jpg" />
-                    <div class="card-content">
-                        <ion-row>
-                            <ion-col col-9>
-                                <div class="card-title">São Paulo</div>
-                                <div class="card-subtitle">41 Listings</div>
-                            </ion-col>
-                            <ion-col col-3>
-                                <div class="card-button">
-                                    <button>install</button>
-                                </div>
-                            </ion-col>
-                        </ion-row>
-                    </div>
-                </ion-card>
-            </div>
-
+    <!--  heartcoin  -->
+    <ion-row class="option-item">
+        <ion-col>
+            <ion-icon id="heart" ios="ios-heart-outline" md="md-heart-outline"></ion-icon> {{hearts}} {{heartTimerDisplay}}
+        </ion-col>
+        <ion-col text-right>
+            <ion-img width="80" height="80" src=""></ion-img><span>{{coins}}</span>
         </ion-col>
     </ion-row>
+    <!-- -->
+    <button (click)="countBtn()">BTN</button>
+</div>
 
-
-    <!-- new game -->
-    <div class="newgame">
-        <button #newgameBtn (click)="newGame()">New Game</button>
-    </div>
-
-    <!-- waiting ... -->
-    <div *ngIf="waitingDatas" class="waiting-game">
-        <ion-row>
-            <div class="waiting-label">waiting...</div>
-        </ion-row>
-
-        <!-- use ngFor to loop data(3 items)-->
-        <div class="waiting">
-            <waiting-box *ngFor="let waiting of waitingDatas" [data]="waiting"></waiting-box>
+<!-- body content-->
+<ion-row>
+    <ion-col col-10 offset-1>
+        <div class="ads-card">
+            <ion-card>
+                <img src="../../assets/ads-test.jpg" />
+                <div class="card-content">
+                    <ion-row>
+                        <ion-col col-9>
+                            <div class="card-title">São Paulo</div>
+                            <div class="card-subtitle">41 Listings</div>
+                        </ion-col>
+                        <ion-col col-3>
+                            <div class="card-button">
+                                <button>install</button>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-card>
         </div>
 
+    </ion-col>
+</ion-row>
 
+
+<!-- new game -->
+<div class="newgame">
+    <button #newgameBtn (click)="newGame()">New Game</button>
+</div>
+
+<!-- waiting ... -->
+<div *ngIf="waitingDatas" class="waiting-game">
+    <ion-row>
+        <div class="waiting-label">waiting...</div>
+    </ion-row>
+
+    <!-- use ngFor to loop data(3 items)-->
+    <div class="waiting">
+        <waiting-box *ngFor="let waiting of waitingDatas" [data]="waiting"></waiting-box>
     </div>
 
-    <div id="timecounter"></div>
 
-</ion-content>
+</div>
+
+<!-- Footer -->
+<ion-footer>
+    <div class="bar">
+        <ion-row>
+            <ion-col col-6 no-padding>
+                <button class="bar-item" (click)="gotoHome()">Home</button>
+            </ion-col>
+            <ion-col col-6 no-padding>
+                <button class="bar-item" (click)="gotoProfile()">Profile</button>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-footer>

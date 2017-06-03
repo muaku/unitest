@@ -19,7 +19,7 @@ export class Mode {
 
   ionViewDidLoad() {
     this.navBar.backButtonClick = () => {
-      this.navCtrl.push("Tabs")
+      this.navCtrl.push("Home")
     }
   }
 

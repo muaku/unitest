@@ -2,11 +2,6 @@ page-profile {
     ion-content {
         background-color: #F7F2F2 !important;
     }
-    .adsArea {
-        width: 100%;
-        height: 50px;
-        background: grey;
-    }
     .profile {
         width: 70%;
         margin: 20px auto;
@@ -46,6 +41,20 @@ page-profile {
             width: 90px;
             height: 40px;
             border-radius: 5px;
+        }
+    }
+    // buttom bar
+    .bar {
+        position: absolute;
+        width: 100%;
+        height: 55px;
+        left: 0;
+        bottom: 0px;
+        z-index: 2;
+        button {
+            width: 100%;
+            height: 55px;
+            background-color: #16A07E;
         }
     }
 }

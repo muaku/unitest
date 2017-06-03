@@ -1,5 +1,22 @@
-<page-home id="home" class="tab" [style.display]="homeDisplay"></page-home>
+<div class="header" [style.display]="homeDisplay">
+    <div class="adsArea">
+    </div>
+    <!--  heartcoin  -->
+    <ion-row class="option-item">
+        <ion-col>
+            <ion-icon id="heart" ios="ios-heart-outline" md="md-heart-outline"></ion-icon> {{heart}} {{heartTimerDisplay}}
+        </ion-col>
+        <ion-col text-right>
+            <ion-img width="80" height="80" src=""></ion-img><span>{{coins}}</span>
+        </ion-col>
+    </ion-row>
+    <!-- -->
+    <button (click)="countBtn()">BTN</button>
+</div>
 
+
+<page-home id="home" class="tab" [style.display]="homeDisplay">
+</page-home>
 
 <page-profile id="profile" class="tab" [style.display]="profileDisplay"></page-profile>
 
@@ -14,7 +31,5 @@
                 <button class="bar-item" (click)="openTab('profile')">Profile</button>
             </ion-col>
         </ion-row>
-
-
     </div>
 </ion-footer>

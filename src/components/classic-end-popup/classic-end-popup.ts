@@ -21,7 +21,7 @@ export class ClassicEndPopup {
 
   goHome() {
     console.log("go Home")
-    this.navCtrl.push("Tabs")
+    this.navCtrl.push("Home")
   }
   goNewGame() {
     console.log("go new game")
